@@ -1,0 +1,16 @@
+Imputation of Missing Data Using Beagle Software
+
+Prerequisites
+•	Beagle Software: Download here
+•	VCF File: Ensure your input file is in VCF format. If starting with a HapMap file, conversion to VCF format is necessary (steps included).
+
+Steps for Imputation
+1.	Download the Beagle software from the official website.
+2.	Use TASSEL software to convert it into VCF format. The conversion process in TASSEL is straightforward and can be done via the graphical interface or command line.
+3.	Place the downloaded Beagle software file in the same directory as your input VCF file. Ensure both files are in the desired working directory.
+4.	Open the command prompt (cmd) or terminal. Change the working directory to the folder containing the Beagle software and the VCF file input.
+5.	Run the following command to start the imputation process: “java -jar exact.name.of.beagle.software.file nthreads=2 gt=Genotypic_file.vcf out=Genotypic_file_imputed.vcf”
+6.	Replace exact.name.of.beagle.software.file with the name of the downloaded Beagle .jar file. Replace Genotypic_file.vcf with the name of your input VCF file.
+7.	The output file (Genotypic_file_imputed.vcf) will be saved in the same directory.
+
+After imputation is complete, use TASSEL software to convert the imputed VCF file back to HapMap format for downstream analyses such as GWAS.
